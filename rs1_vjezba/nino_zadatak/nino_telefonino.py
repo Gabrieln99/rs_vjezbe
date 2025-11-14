@@ -69,6 +69,7 @@ def usporedba_s_bazom(broj_telefona: str, baza: list) -> dict:
     }
 
 
-
-print(validiraj_broj_telefona("+385919306351"))
+if __name__ == "__main__":
+    # Test primjer
+    print(validiraj_broj_telefona("+385919306351"))
 
