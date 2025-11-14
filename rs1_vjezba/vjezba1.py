@@ -1,4 +1,4 @@
-
+#zadatci skripte Rs1
 
 """ 
 a = 5
