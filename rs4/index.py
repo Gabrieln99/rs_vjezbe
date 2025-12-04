@@ -109,6 +109,7 @@ print(f"Vrijeme izvrsavanja {round(t2 - t1, 2)}")
 
 """
 
+
 import asyncio
 import aiohttp
 import time
@@ -138,7 +139,6 @@ asyncio.run(main())
 #print("Imena korisisnika", names)
 #print("Emailovi korisisnika", emails)
 #print("USernamovi korisisnika", usernames)
-
 
 
 
