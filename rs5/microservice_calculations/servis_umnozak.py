@@ -1,0 +1,24 @@
+from aiohttp import web
+from functools import reduce
+
+async def umnozak(request):
+    try:
+        data = await request.json()
+        brojevi = data.get('brojevi')
+        
+        if not brojevi or not isinstance(brojevi, list):
+            return web.json_response(
+                {'error': 'Lista brojeva nije proslijeđena'},
+                status=400
+            )
+        
+        rezultat = reduce(lambda x, y: x * y, brojevi)
+        return web.json_response({'umnozak': rezultat})
+    
+    except Exception as e:
+        return web.json_response({'error': str(e)}, status=400)
+
+app = web.Application()
+app.router.add_post('/umnozak', umnozak)
+
+web.run_app(app, host='localhost', port=8087)
